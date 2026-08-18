@@ -1,0 +1,23 @@
+name: First Time Automation Template
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  automation-template:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run placeholder automation command
+        run: |
+          echo "Replace this step with your automation script/commands."
+          echo "Example: npm ci && npm test"
